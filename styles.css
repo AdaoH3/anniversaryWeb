@@ -1,0 +1,120 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c8f3d7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 50px 20px 20px 20px;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff69b4; /* Hot pink color */
+  font-family: 'Libertinus Mono', monospace;
+  font-size: clamp(40px, 4vw, 240px); /* Better responsive scaling with min/max limits */
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.timer-labels {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: clamp(60px, 5vw, 80px); /* Space below the timer */
+  color: #2b2a2a; /* Same pink color */
+  font-family: 'Georgia', 'Times New Roman', serif; /* Nice serif font */
+  font-size: clamp(30px, 1.2vw, 40px); /* Scales with the timer */
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
+  font-style: italic;
+  opacity: 0.8; /* Slightly transparent for subtle effect */
+}
+
+/* Mobile styles for iPhone 16 and similar devices */
+@media screen and (max-width: 430px) {
+  body {
+    padding: 0;
+    align-items: center; /* Center vertically on mobile */
+    min-height: 100vh;
+  }
+  
+  .wrapper {
+    width: 100vw;
+    max-width: none;
+    overflow: hidden;
+  }
+  
+  .image-wrapper {
+    width: 180%; /* More aggressive cropping - wider than screen */
+    margin-left: -40%; /* Center the heavily cropped image */
+    overflow: hidden;
+  }
+  
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    max-height: 85vh; /* Keep vertical size, but limit to screen height */
+    object-fit: cover;
+  }
+  
+  .centered-text {
+    font-size: clamp(35px, 8vw, 50px); /* Much larger text on mobile */
+  }
+  
+  .timer-labels {
+    margin-top: clamp(45px, 10vw, 60px); /* Closer spacing on mobile */
+    font-size: clamp(10px, 3vw, 18px); /* Larger labels on mobile */
+  }
+}
+
+/* For very small phones */
+@media screen and (max-width: 375px) {
+  .image-wrapper {
+    width: 200%;
+    margin-left: -50%;
+  }
+  
+  .responsive-image {
+    max-height: 80vh;
+  }
+  
+  .centered-text {
+    font-size: clamp(32px, 9vw, 45px); /* Even larger text for small phones */
+  }
+  
+  .timer-labels {
+    margin-top: clamp(40px, 11vw, 50px); /* Even closer on small phones */
+    font-size: clamp(9px, 3.5vw, 16px); /* Proportional labels */
+  }
+}
