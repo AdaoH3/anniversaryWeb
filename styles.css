@@ -39,7 +39,7 @@ body {
   transform: translate(-50%, -50%);
   color: #ff69b4; /* Hot pink color */
   font-family: 'Libertinus Mono', monospace;
-  font-size: clamp(40px, 4vw, 240px); /* Better responsive scaling with min/max limits */
+  font-size: clamp(30px, 4vw, 240px); /* Better responsive scaling with min/max limits */
   text-align: center;
   pointer-events: none;
   white-space: nowrap; /* Prevents text wrapping */
@@ -50,10 +50,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: clamp(60px, 5vw, 80px); /* Space below the timer */
+  margin-top: clamp(30px, 5vw, 80px); /* Space below the timer */
   color: #2b2a2a; /* Same pink color */
-  font-family: 'Georgia', 'Times New Roman', serif; /* Nice serif font */
-  font-size: clamp(30px, 1.2vw, 40px); /* Scales with the timer */
+  font-family: 'Libertinus Mono', 'Times New Roman', serif; /* Nice serif font */
+  font-size: clamp(15px, 2vw, 40px); /* Scales with the timer */
   text-align: center;
   pointer-events: none;
   white-space: nowrap;
