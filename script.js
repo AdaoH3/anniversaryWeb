@@ -13,22 +13,24 @@ function updateAnniversaryTimer() {
   const totalMinutes = Math.floor(diffMs / (1000 * 60));
   const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
-  // Calculate days, hours, and minutes from anniversary start
+  // Calculate days, hours, minutes, and seconds from anniversary start
   const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
 
   // Format with zero padding
   const formattedDays = days.toString().padStart(2, '0');
   const formattedHours = hours.toString().padStart(2, '0');
   const formattedMinutes = minutes.toString().padStart(2, '0');
+  const formattedSeconds = seconds.toString().padStart(2, '0');
 
-  const timerText = `${formattedDays}:${formattedHours}:${formattedMinutes}`;
+  const timerText = `${formattedDays}:${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
   document.getElementById('anniversary-timer').textContent = timerText;
 }
 
 // Initial call
 updateAnniversaryTimer();
 
-// Update every 30 seconds
-setInterval(updateAnniversaryTimer, 30000);
+// Update every second for real-time seconds display
+setInterval(updateAnniversaryTimer, 1000);
