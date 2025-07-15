@@ -33,13 +33,13 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 50px 20px 20px 20px;
+  padding: 20px 0px 20px 0px;
   margin: 0;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1600px;
   position: relative;
 }
 
@@ -79,7 +79,7 @@ body {
 .timer-labels {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%;  
   transform: translate(-50%, -50%);
   margin-top: clamp(25px, 4.5vw, 70px); /* Space below the timer */
   color: #2b2a2a; /* Same pink color */
