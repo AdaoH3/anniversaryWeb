@@ -1,5 +1,5 @@
 // Set your anniversary date here (UTC format for consistency)
-const anniversaryDate = new Date('2025-04-06T12:20:02Z');
+const anniversaryDate = new Date('2025-05-06T12:20:02Z');
 
 function updateAnniversaryTimer() {
   const now = new Date();
