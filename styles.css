@@ -25,7 +25,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #f2f3cb, #f2fdcb, #f2ffa7, #fff6a8, #efff96, #fffd98, #fff597);
+  background: linear-gradient(135deg, #fffef7, #fff9e6, #fff3d3, #ffefbf, #ffeaa7, #ffe69c, #ffdd87);
   background-size: 400% 400%;
   background-attachment: fixed;
   animation: gradientShift 20s ease-in-out infinite;
