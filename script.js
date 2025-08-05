@@ -41,8 +41,8 @@ function updateAnniversaryTimer() {
     const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
 
-    // Format with zero padding
-    const formattedDays = days.toString().padStart(2, '0');
+    // Format with zero padding - dynamic padding for days based on value
+    const formattedDays = days < 100 ? days.toString().padStart(2, '0') : days.toString().padStart(3, '0');
     const formattedHours = hours.toString().padStart(2, '0');
     const formattedMinutes = minutes.toString().padStart(2, '0');
     const formattedSeconds = seconds.toString().padStart(2, '0');
